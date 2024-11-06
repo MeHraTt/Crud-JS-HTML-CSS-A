@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href= "css/bootstrap.min.css">
+</head>
+<body>
+    
+<div class="container bg-info py-2">
+    <h1 class="text-center">CRUD Project</h1>
+    <div>
+        <label for="productNameInput">Product name</label>
+        <input type="text" id="productNameInput" class="form-control " oninput="validationName()">
+   <div id="nameMsg" class="alert  alert-danger d-none"> u should enter first letter capital and from 3 to 8 small</div>
+    </div>
+    <div>
+        <label for="productPriceInput">Product price</label>
+        <input type="number" id="productPriceInput" class="form-control">
+    </div>
+    <div>
+        <label for="productTypeInput">Product type</label>
+        <input type="text" id="productTypeInput" class="form-control">
+    </div>
+    <div>
+        <label for="productDescInput">Product description</label>
+        <textarea type="text" id="productDescInput" class="form-control"></textarea>
+    </div>
+
+
+    <button id="addBtn" class="btn btn-dark my-2 w-100" onclick="addProduct()">Add Product</button>
+    <button id="updateBtn" class="btn btn-dark my-2 w-100 d-none" onclick="updateProduct()" >update Product</button>
+
+<input type="search" placeholder="search by name..." id="searchInput" class="form-control my-3 w-50 mx-auto" oninput="searchProduct()">
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>name</th>
+                <th>price</th>
+                <th>type</th>
+                <th>descreption</th>
+                <th>Action</th>
+            </tr>
+       
+        </thead>
+<tbody id="tableBody">
+  
+</tbody>
+    </table>
+    
+</div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
